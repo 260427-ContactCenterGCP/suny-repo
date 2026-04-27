@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pizza Orders</title>
+</head>
+<body>
+    <h1>Pizza Orders</h1>
+
+    <form id="orderForm" action="">
+        <input type="text" name="order" id="order">
+        <button type="submit">Add Order</button>
+        <button id="deleteBtn" onclick="deleteSelectedOrders()" disabled>Delete Selected Orders</button>
+    </form>
+
+    <ul id="orderList">
+    </ul>
+
+    <script>
+        document.getElementById('orderForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent form from submitting to server
+            
+            const orderInput = document.getElementById('order');
+            const orderText = orderInput.value.trim();
+            
+            if (orderText === '') {
+                alert('Please enter an order');
+                return;
+            }
+            
+            // Create new list item
+            const li = document.createElement('li');
+            li.textContent = orderText;
+            li.style.cursor = 'pointer';
+            li.style.padding = '5px';
+            li.onclick = function(e) {
+                toggleOrderSelection(li, e);
+            };
+            
+            // Add to the list
+            const orderList = document.getElementById('orderList');
+            orderList.appendChild(li);
+            
+            // Clear the input field
+            orderInput.value = '';
+            
+            // Focus back to input for next order
+            orderInput.focus();
+        });
+
+        let selectedOrders = new Set();
+
+        function toggleOrderSelection(li, e) {
+            if (selectedOrders.has(li)) {
+                // Deselect if already selected
+                selectedOrders.delete(li);
+                li.style.backgroundColor = '';
+            } else {
+                // Select if not already selected
+                selectedOrders.add(li);
+                li.style.backgroundColor = '#e0e0e0';
+            }
+            
+            // Enable/disable delete button based on selection
+            document.getElementById('deleteBtn').disabled = selectedOrders.size === 0;
+        }
+
+        function deleteSelectedOrders() {
+            if (selectedOrders.size > 0) {
+                // Convert Set to Array to avoid issues while removing
+                const ordersToDelete = Array.from(selectedOrders);
+                
+                // Remove each selected order
+                ordersToDelete.forEach(order => order.remove());
+                
+                // Clear selection
+                selectedOrders.clear();
+                document.getElementById('deleteBtn').disabled = true;
+            }
+        }
+    </script>
+</body>
+</html>
