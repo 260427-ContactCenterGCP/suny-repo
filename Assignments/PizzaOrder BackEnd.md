@@ -49,10 +49,10 @@ http://34.23.15.226:8080
 
 
 ### VM ScreenShot
-![VM](/Users/sunyyang/JavaWorkspace/LearnJavaWorkspace/suny-repo/Assignments/PizzaOrder BackEnd.md)
+![VM ScreenShot](Screenshots/VM ScreenShot.png)
 
 ### SSH In-Browser
-![SSH](/Users/sunyyang/JavaWorkspace/LearnJavaWorkspace/suny-repo/Assignments/PizzaOrder BackEnd.md)
+![SSH In-Browser](Screenshots/SSH In-Browser.png)
 
 ### App ScreenShot
-![App](/Users/sunyyang/JavaWorkspace/LearnJavaWorkspace/suny-repo/Assignments/PizzaOrder BackEnd.md)
+![App Running](Screenshots/App Running.png)
