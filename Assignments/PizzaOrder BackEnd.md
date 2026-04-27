@@ -49,10 +49,10 @@ http://34.23.15.226:8080
 
 
 ### VM ScreenShot
-![VM ScreenShot](Screenshots/VM ScreenShot.png)
+![VM ScreenShot](https://raw.githubusercontent.com/260427-ContactCenterGCP/suny-repo/main/Assignments/Screenshots/VM%20ScreenShot.png)
 
 ### SSH In-Browser
-![SSH In-Browser](Screenshots/SSH In-Browser.png)
+![SSH In-Browser](https://raw.githubusercontent.com/260427-ContactCenterGCP/suny-repo/main/Assignments/Screenshots/SSH%20In-Browser.png)
 
 ### App ScreenShot
-![App Running](Screenshots/App Running.png)
+![App Running](https://raw.githubusercontent.com/260427-ContactCenterGCP/suny-repo/main/Assignments/Screenshots/App%20Running.png)
