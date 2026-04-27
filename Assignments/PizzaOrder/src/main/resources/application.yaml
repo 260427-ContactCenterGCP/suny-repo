@@ -1,0 +1,4 @@
+spring:
+  name: PizzaOrder
+server:
+  port: 8080
