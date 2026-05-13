@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Suny Yang</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        /* Dialogflow Messenger Custom Styles */
+        df-messenger {
+            z-index: 999;
+            position: fixed;
+            bottom: 16px;
+            right: 16px;
+            --df-messenger-font-color: #000;
+            --df-messenger-font-family: "Google Sans", sans-serif;
+            --df-messenger-chat-background: #f3f6fc;
+            --df-messenger-message-user-background: #d3e3fd;
+            --df-messenger-message-bot-background: #fff;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>About Me</h1>
+</header>
+
+<main>
+    <p>My name is <strong>Suny Yang</strong>.</p>
+    <p>Welcome to my personal page. Feel free to interact with the Neon Arcade Chatbot in the bottom right corner if you have any questions!</p>
+</main>
+
+<!-- Dialogflow Messenger Element -->
+<df-messenger
+        location="us-east1"
+        project-id="project-b60c7101-d24c-48d1-885"
+        agent-id="64a8a322-4b1b-4c8b-8ddf-0682198928e6"
+        language-code="en"
+        max-query-length="-1">
+    <df-messenger-chat-bubble chat-title="Neon Arcade Chatbot">
+    </df-messenger-chat-bubble>
+</df-messenger>
+
+<!-- External Scripts -->
+<script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+
+</body>
+</html>
